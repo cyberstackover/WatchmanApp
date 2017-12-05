@@ -1,0 +1,63 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="BluetoothClientWP8.ImportantPlace"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+  
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+    
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="DarkSlateGray">
+        <TextBlock HorizontalAlignment="Left" Margin="14,29,0,0" TextWrapping="Wrap" Text="Emergency Call" VerticalAlignment="Top" Width="460" FontSize="36" TextAlignment="Center"/>
+        <TextBlock Text="Secure Yourself Everywhere" Style="{StaticResource PhoneTextNormalStyle}" Margin="125,71,102,663"/>
+        <Image HorizontalAlignment="Left" Margin="75,130,0,0" VerticalAlignment="Top" Width="145" Height="137" Source="Image/call_police.jpg"/>
+        <Image HorizontalAlignment="Left" Margin="75,330,0,0" VerticalAlignment="Top" Width="145" Height="137" Source="Image/call_derek.jpg"/>
+        <Image HorizontalAlignment="Left" Margin="264,330,0,0" VerticalAlignment="Top" Width="145" Height="137" Source="Image/call_pln.jpg"/>
+        <Image HorizontalAlignment="Left" Margin="75,540,0,0" VerticalAlignment="Top" Width="145" Height="137" Source="Image/call_sar.jpg"/>
+        <Image HorizontalAlignment="Left" Margin="264,540,0,0" VerticalAlignment="Top" Width="145" Height="137" Source="Image/call_hospital.jpg"/>
+        <Image HorizontalAlignment="Left" Margin="264,130,0,0" VerticalAlignment="Top" Width="145" Height="137" Source="Image/call_firefighter.jpg"/>
+        <Button Name="PemadamButton" Click="Pemadam_Click" Background="DeepSkyBlue" Content="Fire Fighter" Margin="252,241,59,446"/>
+        <Button Name="PemadamButton2" Click="Pemadam_Click" Margin="252,115,59,446"/>
+        <Button Name="PolisiButton" Click="btnPolisi_Click" Background="DeepSkyBlue" Content="Police" Margin="63,241,248,447"/>
+        <Button Name="PolisiButton2" Click="btnPolisi_Click" Margin="63,115,248,447"/>
+        <Button Name="HospitalButton" Click="btnHospital_Click" Background="DeepSkyBlue" Content="Hospital" Margin="252,651,59,35"/>
+        <Button Name="HospitalButton2" Click="btnHospital_Click" Margin="252,528,59,35"/>
+        <Button Name="SarButton" Click="SarButton_Click" Background="DeepSkyBlue" Content="Rescue" Margin="63,651,248,35"/>
+        <Button Name="SarButton2" Click="SarButton_Click" Margin="63,528,248,35"/>
+        <Button Name="PlnButton" Click="btnPln_Click" Background="DeepSkyBlue" Content="Electrical" Margin="252,441,59,245"/>
+        <Button Name="PlnButton2" Click="btnPln_Click" Margin="252,318,59,245"/>
+        <Button Name="DerekButton" Click="DerekButton_Click" Background="DeepSkyBlue" Content="Tow Vehicle" Margin="63,441,248,245"/>
+        <Button Name="DerekButton2" Click="DerekButton_Click" Margin="63,318,248,245"/>
+    </Grid>
+
+</phone:PhoneApplicationPage>
